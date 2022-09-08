@@ -12,9 +12,9 @@ const doc = {
 
   },
 
-  host: 'localhost:3500',
+  host: 'https://shark-app-tgz3l.ondigitalocean.app/',
 
-  schemes: ['http'],
+  schemes: ['https'],
 
   "securityDefinitions": {
 
