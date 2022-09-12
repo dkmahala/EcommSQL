@@ -11,6 +11,7 @@ const pool = mysql
   .on("error", (err) => {
     console.log("Failed to connect to Database - ", err);
   });
+  console.log('connected');
 
 //   pool.connect(function(err) {
 //     if (err) throw err;
