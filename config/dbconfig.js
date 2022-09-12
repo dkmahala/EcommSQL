@@ -2,10 +2,11 @@ const mysql = require("mysql2");
 
 const pool = mysql
   .createConnection({
-    host: "localhost", // HOST NAME
-    user: "root", // USER NAME
-    database: "sqlecomm", // DATABASE NAME
-    password: "root", // DATABASE PASSWORD
+    host: "db-mysql-blr1-36776-do-user-12395789-0.b.db.ondigitalocean.com", // HOST NAME
+    user: "doadmin", // USER NAME
+    database: "defaultdb", // DATABASE NAME
+    password: "AVNS_BVLVcKwefdITEHGu9xn", // DATABASE PASSWORD
+    port: 25060
   })
   .on("error", (err) => {
     console.log("Failed to connect to Database - ", err);

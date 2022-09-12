@@ -10,7 +10,7 @@ const {
 } = require("./user.controller");
 router.get("/users",  getUsers);
 router.post("/register", createUser);
-router.get("/user/:id",  getUserByUserId);
+router.get("/:id",  getUserByUserId);
 router.post("/login", login);
 router.patch("/:id",  updateUsers);
 router.delete("/delete/:id", deleteUser);

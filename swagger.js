@@ -6,15 +6,15 @@ const doc = {
 
   info: {
 
-    title: 'My API',
+    title: 'E-Comm with MYSQL',
 
     description: 'Description',
 
   },
 
-  host: 'https://shark-app-tgz3l.ondigitalocean.app/',
+  host: 'https://shark-app-tgz3l.ondigitalocean.app/api-doc/',
 
-  schemes: ['https'],
+  schemes: ['https', 'http'],
 
   "securityDefinitions": {
 

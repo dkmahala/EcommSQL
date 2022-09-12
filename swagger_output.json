@@ -1,14 +1,15 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
+    "title": "E-Comm with MYSQL",
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "localhost:3500",
+  "host": "https://shark-app-tgz3l.ondigitalocean.app/api-doc/",
   "basePath": "/",
   "schemes": [
-    "http", "https"
+    "https",
+    "http"
   ],
   "securityDefinitions": {
     "bearerAuth": {
@@ -31,11 +32,10 @@
       }
     },
     "/api/user/users": {
-      
       "get": {
         "description": "",
-        "tags" : ["User"],
         "parameters": [],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "OK"
@@ -46,7 +46,6 @@
     "/api/user/register": {
       "post": {
         "description": "",
-        "tags" : ["User"],
         "parameters": [
           {
             "name": "body",
@@ -54,12 +53,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name":{
-                  "example":" any"
-                },
-                "email":{
-                  "example":" any"
-                },
                 "password": {
                   "example": "any"
                 }
@@ -77,10 +70,10 @@
         }
       }
     },
-    "/api/user/user/{id}": {
+    "/api/user/{id}": {
       "get": {
         "description": "",
-        "tags" : ["User"],
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -94,40 +87,10 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/user/login": {
-      "post": {
-        "description": "",
-        "tags" : ["User"],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "Please enter email"
-                },
-                "password": {
-                  "example": "password"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/user/{id}": {
+      },
       "patch": {
         "description": "",
-        "tags" : ["User"],
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -155,10 +118,38 @@
         }
       }
     },
+    "/api/user/login": {
+      "post": {
+        "description": "",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/user/delete/{id}": {
       "delete": {
         "description": "",
-        "tags" : ["User"],
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -177,8 +168,8 @@
     "/api/product/": {
       "get": {
         "description": "",
-        "tags" : ["Products"],
         "parameters": [],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "OK"
@@ -187,8 +178,21 @@
       },
       "patch": {
         "description": "",
-        "tags" : ["Products"],
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "field": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "OK"
@@ -197,7 +201,6 @@
       },
       "delete": {
         "description": "",
-        "tags" : ["Products"],
         "parameters": [],
         "responses": {
           "200": {
@@ -209,27 +212,25 @@
     "/api/product/createP": {
       "post": {
         "description": "",
-        "tags" : ["Products"],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "p_name":{
-                  "example":" string"
-                },
-                "price":{
-                  "example":" int"
-                },
-                "description": {
-                  "example": "any"
-                }
+        "tags": ["Products"],
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "p_name": {
+                "example": "any"
+              },
+              "price": {
+                "example": "any"
+              },
+              "description": {
+                "example": "any"
               }
             }
           }
-        ],
+        }],
         "responses": {
           "201": {
             "description": "Created"
@@ -243,7 +244,7 @@
     "/api/product/{id}": {
       "get": {
         "description": "",
-        "tags" : ["Products"],
+        "tags": ["Products"],
         "parameters": [
           {
             "name": "id",
@@ -262,7 +263,7 @@
     "/api/order/": {
       "get": {
         "description": "",
-        "tags" : ["Orders"],
+        "tags": ["Orders"],
         "parameters": [],
         "responses": {
           "200": {
@@ -272,7 +273,27 @@
       },
       "patch": {
         "description": "",
-        "parameters": [],
+        "tags": ["Orders"],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "order_name": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -281,8 +302,15 @@
       },
       "delete": {
         "description": "",
-        "tags" : ["Orders"],
-        "parameters": [],
+        "tags": ["Orders"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -293,7 +321,7 @@
     "/api/order/createP": {
       "post": {
         "description": "",
-        "tags" : ["Orders"],
+        "tags": ["Orders"],
         "parameters": [
           {
             "name": "body",
@@ -301,17 +329,14 @@
             "schema": {
               "type": "object",
               "properties": {
-                "productid":{
-                  "example":" ProductID"
+                "order_name": {
+                  "example": "any"
                 },
-                "p_name":{
-                  "example":" Name of Product"
+                "price": {
+                  "example": "any"
                 },
-                "Price": {
-                  "example": "Price of Product"
-                },
-                "shipping_add":{
-                  "example": "shipping add"
+                "description": {
+                  "example": "any"
                 }
               }
             }
@@ -330,7 +355,7 @@
     "/api/order/{id}": {
       "get": {
         "description": "",
-        "tags" : ["Orders"],
+        "tags": ["Orders"],
         "parameters": [
           {
             "name": "id",
