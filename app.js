@@ -5,7 +5,7 @@ const userRoute= require('./user/user.route');
 const cors = require('cors');
 const productRoute= require('./products/product.routes');
 const orderRoute=require('./orders/order.route');
-
+const port= process.env.PORT;
 app.use(express.json());
 app.use(cors());
 require('dotenv');
@@ -23,3 +23,6 @@ app.use('/api/order', orderRoute);
 app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 //port 
+app.listen(port, () => {
+    console.log(`Server is running at ${port}`);
+});
