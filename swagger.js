@@ -12,7 +12,7 @@ const doc = {
 
   },
 
-  host: 'https://shark-app-tgz3l.ondigitalocean.app/api-doc',
+  host: 'shark-app-tgz3l.ondigitalocean.app/api-doc',
 
   schemes: ['https', 'http'],
 

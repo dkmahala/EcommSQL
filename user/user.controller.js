@@ -15,7 +15,7 @@ module.exports = {
     const salt = genSaltSync(10);
     body.password = hashSync(body.password, salt);
     create(body, (err, results) => {
-      console.log("hiiii");
+     
       if (err) {
         console.log(err);
         return res.status(500).json({
@@ -23,9 +23,11 @@ module.exports = {
           message: "Database connection errror"
         });
       }
+      console.log("hiiii");
       return res.status(200).json({
         data: results
       });
+      
     });
   },
   login: (req, res) => {
