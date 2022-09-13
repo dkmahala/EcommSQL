@@ -25,7 +25,10 @@ module.exports = {
       }
       console.log("User Created");
       return res.status(201).json({
-        data: results
+        success: 1,
+        data: results,
+        message: "User Created Successfully"
+
       });
       
     });

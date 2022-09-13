@@ -6,7 +6,8 @@ const pool = mysql
     user: "doadmin", // USER NAME
     database: "defaultdb", // DATABASE NAME
     password: "AVNS_MIELDmaRPleSxSBlVu5", // DATABASE PASSWORD
-    port: 25060
+    port: 25060,
+    
     
   })
   .on("error", (err) => {
