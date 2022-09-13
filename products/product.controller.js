@@ -16,6 +16,7 @@ module.exports = {
             message: "Database connection errror"
           });
         }
+        console.log(results);
         return res.status(201).json({
          
           data: results
