@@ -24,7 +24,7 @@ module.exports = {
         });
       }
       console.log("User Created");
-      return res.status(200).json({
+      return res.status(201).json({
         data: results
       });
       

@@ -8,14 +8,14 @@ module.exports = {
       [
         data.name,     
         data.email,
-        data.password
+        data.password,
         
       ],
       (error, results, fields) => {
         if (error) {
           callBack(error);
         }
-        return callBack(null, results);
+        return callBack(results);
       }
     );
   },
