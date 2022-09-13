@@ -50,7 +50,6 @@ module.exports = {
             return;
           }
           return res.json({
-            success: 1,
             data: results
           });
         });
