@@ -5,7 +5,7 @@ const userRoute= require('./user/user.route');
 const cors = require('cors');
 const productRoute= require('./products/product.routes');
 const orderRoute=require('./orders/order.route');
-const port= process.env.PORT || 3500;
+const port= process.env.PORT;
 app.use(express.json());
 app.use(cors());
 const swaggerUi = require('swagger-ui-express');

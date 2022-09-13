@@ -15,6 +15,7 @@ module.exports = {
     const salt = genSaltSync(10);
     body.password = hashSync(body.password, salt);
     create(body, (err, results) => {
+      console.log("hiiii");
       if (err) {
         console.log(err);
         return res.status(500).json({

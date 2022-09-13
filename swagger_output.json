@@ -5,7 +5,7 @@
     "description": "Description",
     "version": "1.0.0"
   },
-  "host": "https://shark-app-tgz3l.ondigitalocean.app/api-doc/",
+  "host": "https://shark-app-tgz3l.ondigitalocean.app/api-doc",
   "basePath": "/",
   "schemes": [
     "https",
@@ -35,7 +35,6 @@
       "get": {
         "description": "",
         "parameters": [],
-        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "OK"
@@ -73,7 +72,6 @@
     "/api/user/{id}": {
       "get": {
         "description": "",
-        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -90,7 +88,6 @@
       },
       "patch": {
         "description": "",
-        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -121,7 +118,6 @@
     "/api/user/login": {
       "post": {
         "description": "",
-        "tags": ["Users"],
         "parameters": [
           {
             "name": "body",
@@ -149,7 +145,6 @@
     "/api/user/delete/{id}": {
       "delete": {
         "description": "",
-        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -169,7 +164,6 @@
       "get": {
         "description": "",
         "parameters": [],
-        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "OK"
@@ -178,21 +172,7 @@
       },
       "patch": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "field": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "tags": ["Users"],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -212,25 +192,7 @@
     "/api/product/createP": {
       "post": {
         "description": "",
-        "tags": ["Products"],
-        "parameters": [{
-          "name": "body",
-          "in": "body",
-          "schema": {
-            "type": "object",
-            "properties": {
-              "p_name": {
-                "example": "any"
-              },
-              "price": {
-                "example": "any"
-              },
-              "description": {
-                "example": "any"
-              }
-            }
-          }
-        }],
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
@@ -244,7 +206,6 @@
     "/api/product/{id}": {
       "get": {
         "description": "",
-        "tags": ["Products"],
         "parameters": [
           {
             "name": "id",
@@ -263,7 +224,6 @@
     "/api/order/": {
       "get": {
         "description": "",
-        "tags": ["Orders"],
         "parameters": [],
         "responses": {
           "200": {
@@ -273,27 +233,7 @@
       },
       "patch": {
         "description": "",
-        "tags": ["Orders"],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "order_name": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -302,15 +242,7 @@
       },
       "delete": {
         "description": "",
-        "tags": ["Orders"],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
@@ -321,27 +253,7 @@
     "/api/order/createP": {
       "post": {
         "description": "",
-        "tags": ["Orders"],
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "order_name": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "201": {
             "description": "Created"
@@ -355,7 +267,6 @@
     "/api/order/{id}": {
       "get": {
         "description": "",
-        "tags": ["Orders"],
         "parameters": [
           {
             "name": "id",
