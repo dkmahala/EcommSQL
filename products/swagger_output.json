@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Testing with MYSQL",
-    "description": "API Testing",
+    "title": "E-Comm with MYSQL",
+    "description": "Description",
     "version": "1.0.0"
   },
   "host": "shark-app-tgz3l.ondigitalocean.app/api-doc",
@@ -23,6 +23,7 @@
     "/": {
       "get": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [],
         "responses": {
           "200": {
@@ -34,6 +35,7 @@
     "/api/user/users": {
       "get": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [],
         "responses": {
           "200": {
@@ -45,6 +47,7 @@
     "/api/user/register": {
       "post": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "body",
@@ -52,6 +55,12 @@
             "schema": {
               "type": "object",
               "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
                 "password": {
                   "example": "any"
                 }
@@ -72,6 +81,7 @@
     "/api/user/{id}": {
       "get": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -88,6 +98,7 @@
       },
       "patch": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -101,6 +112,12 @@
             "schema": {
               "type": "object",
               "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
                 "password": {
                   "example": "any"
                 }
@@ -118,6 +135,7 @@
     "/api/user/login": {
       "post": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "body",
@@ -145,6 +163,7 @@
     "/api/user/delete/{id}": {
       "delete": {
         "description": "",
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "id",
@@ -163,6 +182,7 @@
     "/api/product/": {
       "get": {
         "description": "",
+        "tags": ["Products"],
         "parameters": [],
         "responses": {
           "200": {
@@ -172,6 +192,7 @@
       },
       "patch": {
         "description": "",
+        "tags": ["Products"],
         "parameters": [],
         "responses": {
           "200": {
@@ -181,7 +202,15 @@
       },
       "delete": {
         "description": "",
-        "parameters": [],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": ["Products"],
         "responses": {
           "200": {
             "description": "OK"
@@ -192,6 +221,7 @@
     "/api/product/createP": {
       "post": {
         "description": "",
+        "tags": ["Products"],
         "parameters": [],
         "responses": {
           "201": {
@@ -206,6 +236,7 @@
     "/api/product/{id}": {
       "get": {
         "description": "",
+        "tags": ["Products"],
         "parameters": [
           {
             "name": "id",
@@ -224,6 +255,7 @@
     "/api/order/": {
       "get": {
         "description": "",
+        "tags": ["Orders"],
         "parameters": [],
         "responses": {
           "200": {
@@ -233,7 +265,15 @@
       },
       "patch": {
         "description": "",
-        "parameters": [],
+        "tags": ["Orders"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -242,7 +282,15 @@
       },
       "delete": {
         "description": "",
-        "parameters": [],
+        "tags": ["Orders"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -253,6 +301,7 @@
     "/api/order/createP": {
       "post": {
         "description": "",
+        "tags": ["Orders"],
         "parameters": [],
         "responses": {
           "201": {
@@ -267,6 +316,7 @@
     "/api/order/{id}": {
       "get": {
         "description": "",
+        "tags": ["Orders"],
         "parameters": [
           {
             "name": "id",

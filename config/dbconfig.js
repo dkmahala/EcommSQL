@@ -17,10 +17,10 @@ const pool = mysql
   pool.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
-    // var sql = "CREATE TABLE Products (id int not null auto_increment,p_name VARCHAR(255) not null,price int(255) not null, description VARCHAR(255) not null, primary key(id));"
+    // var sql = "CREATE TABLE Products (id int not null auto_increment,p_name VARCHAR(255) not null,price int(255) not null, description VARCHAR(255) not null, primary key(id)) ;"//
     // pool.query(sql, function (err, result) {
     //   if (err) throw err;
-    //   console.log(sql);
+    //   console.log('Table Created');
     // });
    });
 module.exports = pool;

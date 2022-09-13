@@ -6,9 +6,9 @@ const doc = {
 
   info: {
 
-    title: 'E-Comm with MYSQL',
+    title: 'Testing with MYSQL',
 
-    description: 'Description',
+    description: 'API Testing',
 
   },
 

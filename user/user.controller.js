@@ -23,7 +23,7 @@ module.exports = {
           message: "Database connection errror"
         });
       }
-      console.log("hiiii");
+      console.log("User Created");
       return res.status(200).json({
         data: results
       });
