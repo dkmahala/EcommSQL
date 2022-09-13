@@ -11,8 +11,7 @@ app.use(cors());
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile= require('./swagger_output.json')
-
-// require('./swagger')
+//require('./swagger')
 
 app.get('/', (req, res)=>{
  res.send('Hello WOrld');

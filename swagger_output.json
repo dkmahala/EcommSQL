@@ -5,7 +5,7 @@
     "description": "API Testing",
     "version": "1.0.0"
   },
-  "host": "shark-app-tgz3l.ondigitalocean.app/api-doc",
+  "host": "shark-app-tgz3l.ondigitalocean.app",
   "basePath": "/",
   "schemes": [
     "https",
