@@ -5,7 +5,7 @@ module.exports = {
     pool.query(
       `INSERT INTO Users (name, email, password ) 
                 values(?,?,?)`,
-      [ name,email,password],
+      [email, data.name, password],
       (error, results, fields) => {
         if (error) {
           callBack(error);
