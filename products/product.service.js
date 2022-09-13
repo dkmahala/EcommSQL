@@ -3,7 +3,7 @@ const pool = require('../config/dbconfig');
 module.exports = {
   createProduct: (data, callBack) => {
     pool.query(
-      `insert into Products(p_name, price, description ) 
+      `insert into Products (p_name, price, description ) 
                 values(?,?,?)`,
       [
         data.p_name,     
