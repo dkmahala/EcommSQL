@@ -8,6 +8,7 @@ const orderRoute=require('./orders/order.route');
 const port= process.env.PORT;
 app.use(express.json());
 app.use(cors());
+require('dotenv');
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile= require('./swagger_output.json')
 
