@@ -17,7 +17,7 @@ const pool = mysql
 
   pool.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!");
+    console.log("Connected to user table!");
   });
 
 module.exports = {
@@ -29,8 +29,9 @@ module.exports = {
       (error, results, fields) => {
         if (error) {
           callBack(error);
+          console.log(error);
         }
-        return callBack( results);
+        return callBack( null,results);
       }
     );
   },
