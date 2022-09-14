@@ -1,4 +1,24 @@
-const pool = require('../config/dbconfig');
+const mysql = require("mysql2");
+
+const pool = mysql
+  .createConnection({
+    host: "db-mysql-blr1-36776-do-user-12395789-0.b.db.ondigitalocean.com", // HOST NAME
+    user: "doadmin", // USER NAME
+    database: "defaultdb", // DATABASE NAME
+    password: "AVNS_MIELDmaRPleSxSBlVu5", // DATABASE PASSWORD
+    port: 25060,
+    
+    
+  })
+  .on("error", (err) => {
+    console.log("Failed to connect to Database - ", err);
+  });
+
+
+  pool.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
 
 module.exports = {
   create: (data, callBack) => {
