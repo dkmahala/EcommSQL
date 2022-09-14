@@ -10,7 +10,7 @@ module.exports = {
         if (error) {
           callBack(error);
         }
-        return callBack(null, results);
+        return callBack( results);
       }
     );
   },
@@ -22,7 +22,7 @@ module.exports = {
         if (error) {
           callBack(error);
         }
-        return callBack(null, results[0]);
+        return callBack( results);
       }
     );
   },
@@ -34,7 +34,7 @@ module.exports = {
         if (error) {
           callBack(error);
         }
-        return callBack(null, results[0]);
+        return callBack( results);
       }
     );
   },
@@ -46,7 +46,7 @@ module.exports = {
         if (error) {
           callBack(error);
         }
-        return callBack(null, results);
+        return callBack( results);
       }
     );
   },
